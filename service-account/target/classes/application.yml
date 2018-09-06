@@ -1,0 +1,22 @@
+server:
+  port: 7010
+spring:
+  application:
+    name: account-Service
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/microservice_account?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    password: 123456
+    username: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+

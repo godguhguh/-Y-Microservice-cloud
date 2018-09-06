@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-eureka-server1" />
+        <module name="cloud-eureka-server2" />
+        <module name="cloud-eureka-server3" />
+        <module name="cloud-getway" />
+        <module name="service-account" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-eureka-server1" target="1.8" />
+      <module name="cloud-eureka-server2" target="1.8" />
+      <module name="cloud-eureka-server3" target="1.8" />
+      <module name="cloud-getway" target="1.8" />
+      <module name="microservice-cloud" target="1.8" />
+      <module name="service-account" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

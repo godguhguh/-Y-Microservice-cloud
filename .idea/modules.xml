@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cloud-eureka-server1/cloud-eureka-server1.iml" filepath="$PROJECT_DIR$/cloud-eureka-server1/cloud-eureka-server1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-eureka-server2/cloud-eureka-server2.iml" filepath="$PROJECT_DIR$/cloud-eureka-server2/cloud-eureka-server2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-eureka-server3/cloud-eureka-server3.iml" filepath="$PROJECT_DIR$/cloud-eureka-server3/cloud-eureka-server3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-getway/cloud-getway.iml" filepath="$PROJECT_DIR$/cloud-getway/cloud-getway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-cloud.iml" filepath="$PROJECT_DIR$/microservice-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-account/service-account.iml" filepath="$PROJECT_DIR$/service-account/service-account.iml" />
+    </modules>
+  </component>
+</project>
