@@ -26,6 +26,8 @@ public interface UserService {
      */
     void deleteUser(Long id);
 
+    void updateUser(User user);
+
     /**
      * 获取用户
      * @param id

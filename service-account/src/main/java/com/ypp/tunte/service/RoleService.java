@@ -51,5 +51,11 @@ public interface RoleService {
      */
     List<Role> listAllRole();
 
+    /**
+     *
+     * @param ids
+     * @return
+     */
+    List<Role> listByIds(List<Long> ids);
 
 }

@@ -7,7 +7,9 @@ import com.ypp.tunte.service.RoleService;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -57,5 +59,11 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public List<Role> listAllRole() {
         return roleRepository.findAll();
+    }
+
+    @Override
+    public List<Role> listByIds(List<Long> ids) {
+        if(CollectionUtils.isEmpty(ids)){return Collections.EMPTY_LIST;}
+        return roleRepository.findByIdIn(ids);
     }
 }
