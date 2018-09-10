@@ -1,17 +1,17 @@
 package com.ypp.tunte.service.impl;
 
 import com.ypp.tunte.annotation.CommonDataGenMethodAnnotation;
+import com.ypp.tunte.domain.Permission;
 import com.ypp.tunte.domain.Role;
 import com.ypp.tunte.repository.RoleRepository;
+import com.ypp.tunte.service.PermissionService;
 import com.ypp.tunte.service.RoleService;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 /**
  * <p>功能描述在这</p>
@@ -24,6 +24,9 @@ public class RoleServiceImpl implements RoleService {
 
     @Autowired
     private RoleRepository roleRepository;
+
+    @Autowired
+    private PermissionService   permissionService;
 
     @Override
     public void createRole(String roleName) {
@@ -65,5 +68,39 @@ public class RoleServiceImpl implements RoleService {
     public List<Role> listByIds(List<Long> ids) {
         if(CollectionUtils.isEmpty(ids)){return Collections.EMPTY_LIST;}
         return roleRepository.findByIdIn(ids);
+    }
+
+    @Override
+    public void correlationPermissions(Long roleId, Long... permissionIds) {
+        try {
+            Role role=getById(roleId);
+            List<Permission> permissionList= permissionService.listPermissionByIds(Arrays.asList(permissionIds));
+            if(!CollectionUtils.isEmpty(permissionList)) {
+                if (!CollectionUtils.isEmpty(role.getPermissions())) {
+                    role.getPermissions().addAll(permissionList);
+                } else {
+                    role.setPermissions(new HashSet<>(permissionList));
+                }
+                updateRole(role);
+            }
+
+        } catch (NotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void uncorrelationPermissions(Long roleId, Long... permissionIds) {
+        try {
+            Role role=getById(roleId);
+            List<Permission> permissionList= permissionService.listPermissionByIds(Arrays.asList(permissionIds));
+            if (!CollectionUtils.isEmpty(role.getPermissions()) && !CollectionUtils.isEmpty(permissionList) ){
+                role.getPermissions().removeAll(new HashSet<>(permissionList));
+                updateRole(role);
+            }
+        } catch (NotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
 }

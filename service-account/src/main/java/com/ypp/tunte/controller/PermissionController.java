@@ -1,7 +1,8 @@
 package com.ypp.tunte.controller;
 
-import com.ypp.tunte.controller.pojo.ResponseResult;
+
 import com.ypp.tunte.domain.Permission;
+import com.ypp.tunte.pojo.ResponseResult;
 import com.ypp.tunte.service.PermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

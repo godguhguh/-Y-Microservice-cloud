@@ -1,6 +1,8 @@
 package com.ypp.tunte.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.Sets;
+import org.apache.commons.lang.StringUtils;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -50,6 +52,9 @@ public class User extends BaseEntity {
 
     @Column(name = "salt",length = 50)
     public String getSalt() {
+        if(StringUtils.isEmpty(salt)){
+            salt=this.userName;
+        }
         return salt;
     }
 
@@ -61,6 +66,7 @@ public class User extends BaseEntity {
     @JoinTable(name = "sys_users_roles",joinColumns ={
             @JoinColumn(name = "user_id",referencedColumnName = "id")
     },inverseJoinColumns = {@JoinColumn(name = "role_id",referencedColumnName = "id")})
+    @JsonIgnore
     public Set<Role> getRoles() {
         return roles;
     }

@@ -1,4 +1,4 @@
-package com.ypp.tunte.controller.pojo;
+package com.ypp.tunte.pojo;
 
 import java.io.Serializable;
 
@@ -6,10 +6,9 @@ import java.io.Serializable;
  * <p>功能描述在这</p>
  *
  * @author pingpingyan
- * @date 2018/9/6 0006
+ * @date 2018/9/7 0007
  */
 public class ResponseResult implements Serializable {
-
     private final static  int SUCCESS_CODE=200;
     private final static  int FAIL_CODE=500;
     private final static  String  SUCCESS_DEFAULT_MESSAGE="请求成功";
