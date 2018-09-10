@@ -1,9 +1,10 @@
 package com.ypp.tunte.controller;
 
 
-import com.ypp.tunte.domain.Permission;
-import com.ypp.tunte.domain.Role;
-import com.ypp.tunte.pojo.ResponseResult;
+
+import com.ypp.tunte.common.domain.user.Permission;
+import com.ypp.tunte.common.domain.user.Role;
+import com.ypp.tunte.common.pojo.ResponseResult;
 import com.ypp.tunte.service.PermissionService;
 import com.ypp.tunte.service.RoleService;
 import javassist.NotFoundException;

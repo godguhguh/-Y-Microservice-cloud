@@ -1,7 +1,6 @@
 package com.ypp.tunte.service;
 
-import com.google.common.collect.Lists;
-import com.ypp.tunte.domain.User;
+import com.ypp.tunte.common.domain.user.User;
 import javassist.NotFoundException;
 
 import java.util.List;

@@ -1,8 +1,9 @@
 package com.ypp.tunte.fegin;
 
-import com.ypp.tunte.constant.CommonConstant;
+import com.ypp.tunte.common.constant.CommonConstant;
+import com.ypp.tunte.common.domain.user.User;
+import com.ypp.tunte.common.pojo.ResponseResult;
 import com.ypp.tunte.fegin.fallback.UserServiceClientFallBack;
-import com.ypp.tunte.pojo.ResponseResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,6 +19,6 @@ public interface UserServiceClient {
 
 
     @GetMapping("/api/user/getByUserName")
-    String getByUserName(@RequestParam("userName") String userName);
+    ResponseResult<User> getByUserName(@RequestParam("userName") String userName);
 
 }

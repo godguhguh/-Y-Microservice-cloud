@@ -1,6 +1,7 @@
 package com.ypp.tunte.utils;
 
-import com.ypp.tunte.domain.User;
+
+import com.ypp.tunte.common.domain.user.User;
 import org.apache.shiro.crypto.RandomNumberGenerator;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;

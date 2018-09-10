@@ -1,4 +1,4 @@
-package com.ypp.tunte.constant;
+package com.ypp.tunte.common.constant;
 
 /**
  * <p>功能描述在这</p>

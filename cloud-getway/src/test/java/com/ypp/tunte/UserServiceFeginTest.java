@@ -1,5 +1,6 @@
 package com.ypp.tunte;
 
+import com.ypp.tunte.common.pojo.ResponseResult;
 import com.ypp.tunte.fegin.UserServiceClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +24,7 @@ public class UserServiceFeginTest {
     @Test
     public void findByUserNameTest(){
 
-       String str= userServiceClient.getByUserName("admin");
+        ResponseResult str= userServiceClient.getByUserName("admin");
         System.out.println(str);
 
     }

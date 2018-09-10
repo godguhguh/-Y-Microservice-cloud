@@ -1,7 +1,8 @@
 package com.ypp.tunte.api;
 
-import com.ypp.tunte.domain.User;
-import com.ypp.tunte.pojo.ResponseResult;
+
+import com.ypp.tunte.common.domain.user.User;
+import com.ypp.tunte.common.pojo.ResponseResult;
 import com.ypp.tunte.service.UserService;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class UserServiceApi {
     private UserService userService;
 
     @GetMapping("/getByUserName")
-    public ResponseResult getUserByUserName(@RequestParam String userName){
+    public ResponseResult<User> getUserByUserName(@RequestParam String userName){
         try {
           User user=  userService.getUserByUserName(userName);
           return ResponseResult.success(user);

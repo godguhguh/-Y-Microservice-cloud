@@ -1,8 +1,9 @@
 package com.ypp.tunte.controller;
 
 
-import com.ypp.tunte.domain.User;
-import com.ypp.tunte.pojo.ResponseResult;
+
+import com.ypp.tunte.common.domain.user.User;
+import com.ypp.tunte.common.pojo.ResponseResult;
 import com.ypp.tunte.service.RoleService;
 import com.ypp.tunte.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

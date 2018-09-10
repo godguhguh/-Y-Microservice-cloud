@@ -1,6 +1,7 @@
 package com.ypp.tunte.service;
 
-import com.ypp.tunte.domain.Permission;
+
+import com.ypp.tunte.common.domain.user.Permission;
 import javassist.NotFoundException;
 
 import java.util.List;

@@ -1,6 +1,6 @@
-package com.ypp.tunte.annotation;
+package com.ypp.tunte.common.annotation;
 
-import com.ypp.tunte.enums.DataFieldTypeEnum;
+import com.ypp.tunte.common.enums.DataFieldTypeEnum;
 
 import java.lang.annotation.*;
 

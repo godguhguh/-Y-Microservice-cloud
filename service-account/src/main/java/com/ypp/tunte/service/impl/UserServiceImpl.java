@@ -1,10 +1,11 @@
 package com.ypp.tunte.service.impl;
 
 import com.google.common.collect.Sets;
-import com.ypp.tunte.annotation.CommonDataGenMethodAnnotation;
-import com.ypp.tunte.domain.Permission;
-import com.ypp.tunte.domain.Role;
-import com.ypp.tunte.domain.User;
+
+import com.ypp.tunte.common.annotation.CommonDataGenMethodAnnotation;
+import com.ypp.tunte.common.domain.user.Permission;
+import com.ypp.tunte.common.domain.user.Role;
+import com.ypp.tunte.common.domain.user.User;
 import com.ypp.tunte.repository.UserRepository;
 import com.ypp.tunte.service.RoleService;
 import com.ypp.tunte.service.UserService;

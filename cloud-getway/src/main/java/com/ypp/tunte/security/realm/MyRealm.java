@@ -1,5 +1,6 @@
 package com.ypp.tunte.security.realm;
 
+import com.ypp.tunte.common.pojo.ResponseResult;
 import com.ypp.tunte.fegin.UserServiceClient;
 import com.ypp.tunte.utils.JWTUtil;
 import org.apache.logging.log4j.LogManager;
@@ -29,7 +30,7 @@ public class MyRealm  extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
         String username = JWTUtil.getUsername(principals.toString());
-
+        ResponseResult responseResult= userServiceClient.getByUserName(username);
         return null;
     }
 

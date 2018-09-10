@@ -1,4 +1,6 @@
-package com.ypp.tunte.domain;
+package com.ypp.tunte.common.domain.user;
+
+import com.ypp.tunte.common.domain.BaseEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

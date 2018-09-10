@@ -1,5 +1,4 @@
-package com.ypp.tunte.enums;
-
+package com.ypp.tunte.common.enums;
 
 
 /**

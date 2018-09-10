@@ -1,4 +1,4 @@
-package com.ypp.tunte.pojo;
+package com.ypp.tunte.common.pojo;
 
 import java.io.Serializable;
 
@@ -8,14 +8,16 @@ import java.io.Serializable;
  * @author pingpingyan
  * @date 2018/9/7 0007
  */
-public class ResponseResult implements Serializable {
+public class ResponseResult<T> implements Serializable {
     private final static  int SUCCESS_CODE=200;
     private final static  int FAIL_CODE=500;
     private final static  String  SUCCESS_DEFAULT_MESSAGE="请求成功";
     private final static  String  FAIL_DEFAULT_MESSAGE="请求错误";
 
 
-    public ResponseResult(int code, String message, Object data) {
+    public ResponseResult(){}
+
+    public ResponseResult(int code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
@@ -23,7 +25,7 @@ public class ResponseResult implements Serializable {
 
     private int code;
     private String message;
-    private Object data;
+    private T data;
 
     public int getCode() {
         return code;
@@ -41,11 +43,11 @@ public class ResponseResult implements Serializable {
         this.message = message;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 

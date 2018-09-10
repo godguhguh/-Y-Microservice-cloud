@@ -1,5 +1,8 @@
 package com.ypp.tunte.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.ypp.tunte.common.domain.user.User;
+import com.ypp.tunte.common.pojo.ResponseResult;
 import com.ypp.tunte.fegin.UserServiceClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,8 +25,13 @@ public class UserController {
     private UserServiceClient userServiceClient;
 
     @GetMapping("/{userName}")
-    public  String findByUserName(@PathVariable("userName") String userName){
-        return userServiceClient.getByUserName(userName);
+    public String findByUserName(@PathVariable("userName") String userName){
+
+        ResponseResult<User> responseResult=userServiceClient.getByUserName(userName);
+        User user=  responseResult.getData();
+
+
+        return JSON.toJSONString(user.getRoles());
 
     }
 

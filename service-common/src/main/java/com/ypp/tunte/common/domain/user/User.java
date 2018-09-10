@@ -1,8 +1,9 @@
-package com.ypp.tunte.domain;
+package com.ypp.tunte.common.domain.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.Sets;
-import org.apache.commons.lang.StringUtils;
+import com.ypp.tunte.common.domain.BaseEntity;
+import org.springframework.util.StringUtils;
 
 import javax.persistence.*;
 import java.util.Set;

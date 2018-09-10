@@ -1,9 +1,10 @@
 package com.ypp.tunte.aop;
 
 import com.google.common.collect.Maps;
-import com.ypp.tunte.annotation.CommonDataFieldAnnotation;
-import com.ypp.tunte.domain.BaseEntity;
-import com.ypp.tunte.enums.DataFieldTypeEnum;
+
+import com.ypp.tunte.common.annotation.CommonDataFieldAnnotation;
+import com.ypp.tunte.common.domain.BaseEntity;
+import com.ypp.tunte.common.enums.DataFieldTypeEnum;
 import org.apache.commons.lang.ArrayUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -29,7 +30,7 @@ public class DataEntityAop {
 
 
 
-    @Pointcut("@annotation(com.ypp.tunte.annotation.CommonDataGenMethodAnnotation)")
+    @Pointcut("@annotation(com.ypp.tunte.common.annotation.CommonDataGenMethodAnnotation)")
     public void before(){}
 
     /**

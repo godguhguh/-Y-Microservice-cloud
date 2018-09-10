@@ -1,6 +1,7 @@
 package com.ypp.tunte.service;
 
-import com.ypp.tunte.domain.Role;
+
+import com.ypp.tunte.common.domain.user.Role;
 import javassist.NotFoundException;
 
 import java.util.List;

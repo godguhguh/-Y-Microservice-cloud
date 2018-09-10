@@ -2,7 +2,7 @@ package com.ypp.tunte.fegin.fallback;
 
 import com.alibaba.fastjson.JSON;
 import com.ypp.tunte.fegin.UserServiceClient;
-import com.ypp.tunte.pojo.ResponseResult;
+import com.ypp.tunte.common.pojo.ResponseResult;
 import org.springframework.stereotype.Component;
 
 /**
@@ -17,7 +17,7 @@ public class UserServiceClientFallBack implements UserServiceClient{
     private static final String FEGIN_REQUEST_FAIL_MSG="fegin请求失败";
 
     @Override
-    public String getByUserName(String userName) {
-        return JSON.toJSONString(ResponseResult.error(FEGIN_REQUEST_FAIL_MSG));
+    public ResponseResult getByUserName(String userName) {
+        return ResponseResult.error(FEGIN_REQUEST_FAIL_MSG);
     }
 }

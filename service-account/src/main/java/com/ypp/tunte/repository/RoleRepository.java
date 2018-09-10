@@ -1,6 +1,7 @@
 package com.ypp.tunte.repository;
 
-import com.ypp.tunte.domain.Role;
+
+import com.ypp.tunte.common.domain.user.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,7 +1,7 @@
-package com.ypp.tunte.domain;
+package com.ypp.tunte.common.domain;
 
-import com.ypp.tunte.annotation.CommonDataFieldAnnotation;
-import com.ypp.tunte.enums.DataFieldTypeEnum;
+import com.ypp.tunte.common.annotation.CommonDataFieldAnnotation;
+import com.ypp.tunte.common.enums.DataFieldTypeEnum;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,7 +14,7 @@ import java.util.Date;
  * @date 2018/9/5 0005
  */
 @MappedSuperclass
-public class BaseEntity implements Serializable{
+public class BaseEntity implements Serializable {
     /**
      * 主键
      */

@@ -1,6 +1,7 @@
 package com.ypp.tunte.repository;
 
-import com.ypp.tunte.domain.Permission;
+
+import com.ypp.tunte.common.domain.user.Permission;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

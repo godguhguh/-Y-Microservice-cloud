@@ -1,6 +1,7 @@
-package com.ypp.tunte.domain;
+package com.ypp.tunte.common.domain.user;
 
 import com.google.common.collect.Sets;
+import com.ypp.tunte.common.domain.BaseEntity;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -13,7 +14,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "sys_roles")
-public class Role  extends BaseEntity{
+public class Role  extends BaseEntity {
 
     public Role() {
     }

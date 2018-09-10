@@ -1,6 +1,7 @@
 package com.ypp.tunte.repository;
 
-import com.ypp.tunte.domain.User;
+
+import com.ypp.tunte.common.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
